@@ -447,7 +447,7 @@ class SheetsLoadData(GoogleSheets):
     api = "sheets"
     path = "spreadsheets/{spreadsheet_id}/values/'{sheet_title}'!{range_rows}"
     data_key = "values"
-    key_properties = ["sheetId", "loadDate"]
+    key_properties = ["sheetId"]
     replication_method = "FULL_TABLE"
     params = {}
 
@@ -624,7 +624,7 @@ class SheetsLoaded(GoogleSheets):
     api = "sheets"
     path = "spreadsheets/{spreadsheet_id}/values/'{sheet_title}'!{range_rows}"
     data_key = "values"
-    key_properties = ["sheetId", "loadDate"]
+    key_properties = ["sheetId"]
     replication_method = "FULL_TABLE"
     params = {
         "dateTimeRenderOption": "SERIAL_NUMBER",
