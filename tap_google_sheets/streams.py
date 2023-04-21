@@ -645,7 +645,7 @@ class SheetsLoaded(GoogleSheets):
 # "spreadsheet_metadata" -> get sheets in the spreadsheet and load sheet's records
 #       and prepare records for "sheet_metadata" and "sheets_loaded" streams
 STREAMS = OrderedDict()
-STREAMS['file_metadata'] = FileMetadata
+#STREAMS['file_metadata'] = FileMetadata
 STREAMS['spreadsheet_metadata'] = SpreadSheetMetadata
 STREAMS['sheet_metadata'] = SheetMetadata
 STREAMS['sheets_loaded'] = SheetsLoaded
