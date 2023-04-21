@@ -61,13 +61,13 @@ def sync(client, config, catalog, state):
                 stream_obj.sync(catalog, state, sheets_loaded_records)
 
         # sync file metadata
-        elif stream_name == "file_metadata":
-            file_changed, file_modified_time = stream_obj.sync(catalog, state, selected_streams)
-            if not file_changed:
-                break
+        #elif stream_name == "file_metadata":
+        #    file_changed, file_modified_time = stream_obj.sync(catalog, state, selected_streams)
+        #    if not file_changed:
+        #        break
 
         LOGGER.info("FINISHED Syncing: %s", stream_name)
 
     # write "file_metadata" bookmark, as we have successfully synced all the sheet's records
     # it will force to re-sync of there is any interrupt between the sync
-    write_bookmark(state, 'file_metadata', strftime(file_modified_time))
+    # write_bookmark(state, 'file_metadata', strftime(file_modified_time))
