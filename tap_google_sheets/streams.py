@@ -2,7 +2,6 @@ import json
 import os
 import time
 import re
-from unidecode import unidecode
 import simplejson as json
 from collections import OrderedDict
 import urllib.parse
@@ -37,7 +36,7 @@ def write_schema(catalog, stream_name):
     stream = catalog.get_stream(stream_name)
     schema = stream.schema.to_dict()
     try:
-        singer.write_schema(unidecode(stream_name), schema, stream.key_properties)
+        singer.write_schema(stream_name, schema, stream.key_properties)
         LOGGER.info('Writing schema for: {}'.format(stream_name))
     except OSError as err:
         LOGGER.info('OS Error writing schema for: {}'.format(stream_name))
@@ -53,13 +52,13 @@ def write_record(stream_name, record, time_extracted, version=None):
         if version:
             singer.messages.write_message(
                 RecordMessage(
-                    stream=unidecode(stream_name),
+                    stream=stream_name,
                     record=record,
                     version=version,
                     time_extracted=time_extracted))
         else:
             singer.messages.write_record(
-                stream_name=unidecode(stream_name),
+                stream_name=stream_name,
                 record=record,
                 time_extracted=time_extracted)
     except OSError as err:
@@ -494,7 +493,7 @@ class SheetsLoadData(GoogleSheets):
                         last_integer = int(get_bookmark(self.state, sheet_title, 0))
                         activate_version = int(time.time() * 1000)
                         activate_version_message = singer.ActivateVersionMessage(
-                                stream=unidecode(sheet_title),
+                                stream=sheet_title,
                                 version=activate_version)
                         if last_integer == 0:
                             # initial load, send activate_version before AND after data sync
