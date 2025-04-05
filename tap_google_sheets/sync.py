@@ -30,7 +30,7 @@ def sync(client, config, catalog, state):
     for stream_name, stream_obj in STREAMS.items():
 
         # get the stream object
-        stream_obj = stream_obj(client, config.get("spreadsheet_id"), config.get("start_date"))
+        stream_obj = stream_obj(client, config.get("spreadsheet_id"), config.get("sheets_selected"), config.get("start_date"))
 
         # to sync the sheet's data, we need to get "spreadsheet_metadata"
         if stream_name == "spreadsheet_metadata":
@@ -43,8 +43,15 @@ def sync(client, config, catalog, state):
 
             # get sheets from the metadata
             sheets = spreadsheet_metadata.get("sheets")
+            # selecting sheets only when provided by user
+            order_selected_sheets = []
+            if config.get("sheets_selected"):
+                for sheet in sheets:
+                    if sheet.get('properties', {}).get('title') in [sheet_name.strip() for sheet_name in config.get("sheets_selected").split(",") ]:
+                        order_selected_sheets.append(sheet)
+                sheets = order_selected_sheets
             # class to load sheet's data
-            sheets_load_data = SheetsLoadData(client, config.get("spreadsheet_id"), config.get("start_date"))
+            sheets_load_data = SheetsLoadData(client, config.get("spreadsheet_id"), config.get("sheets_selected"), config.get("start_date"))
 
             # perform sheet's sync and get sheet's metadata and sheet loaded records for "sheet_metadata" and "sheets_loaded" streams
             sheet_metadata_records, sheets_loaded_records = sheets_load_data.load_data(catalog=catalog,

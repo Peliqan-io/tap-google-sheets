@@ -1,12 +1,15 @@
 from singer.catalog import Catalog, CatalogEntry, Schema
 from tap_google_sheets.schema import STREAMS
+import singer 
+
+logger = singer.get_logger()
 
 
-def discover(client, spreadsheet_id):
+def discover(client, spreadsheet_id,sheets_selected):
     catalog = Catalog([])
 
     for stream, stream_obj in STREAMS.items():
-        stream_object = stream_obj(client, spreadsheet_id)
+        stream_object = stream_obj(client, spreadsheet_id,sheets_selected)
         schemas, field_metadata = stream_object.get_schemas()
 
         # loop over the schema and prepare catalog
@@ -26,7 +29,7 @@ def discover(client, spreadsheet_id):
                     if table_key_properties:
                         key_props = table_key_properties
             else:
-                stream_obj = STREAMS.get(stream_name)(client, spreadsheet_id)
+                stream_obj = STREAMS.get(stream_name)(client, spreadsheet_id,sheets_selected)
                 key_props = stream_obj.key_properties
 
             catalog.streams.append(CatalogEntry(
