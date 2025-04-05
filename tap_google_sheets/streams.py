@@ -460,7 +460,7 @@ class SheetsLoadData(GoogleSheets):
     replication_method = "FULL_TABLE"
     params = {}
 
-    def xxload_data(self, catalog, state, selected_streams, sheets, spreadsheet_time_extracted):
+    def load_data(self, catalog, state, selected_streams, sheets, spreadsheet_time_extracted):
         """
         Load sheet's records if that sheet is selected for sync
         """
