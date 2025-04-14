@@ -235,13 +235,13 @@ def get_sheet_schema_columns(sheet):
 #   endpoint: spreadsheets/{spreadsheet_id}
 #   params: includeGridData = true, ranges = '{sheet_title}'!1:2
 # This endpoint includes detailed metadata about each cell - incl. data type, formatting, etc.
-def get_sheet_metadata(sheet, spreadsheet_id, client):
+def get_sheet_metadata(sheet, spreadsheet_id, client,sheets_selected):
     sheet_id = sheet.get('properties', {}).get('sheetId')
     sheet_title = sheet.get('properties', {}).get('title')
     LOGGER.info('sheet_id = {}, sheet_title = {}'.format(sheet_id, sheet_title))
 
     stream_name = 'sheet_metadata'
-    stream_obj = STREAMS.get(stream_name)(client, spreadsheet_id)
+    stream_obj = STREAMS.get(stream_name)(client, spreadsheet_id, sheets_selected)
     api = stream_obj.api
     sheet_title_encoded = urllib.parse.quote_plus(sheet_title)
     sheet_title_escaped = re.escape(sheet_title)

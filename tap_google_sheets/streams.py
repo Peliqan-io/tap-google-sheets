@@ -126,10 +126,11 @@ class GoogleSheets:
     params = None
     state = None
 
-    def __init__(self, client, spreadsheet_id, start_date=None):
+    def __init__(self, client, spreadsheet_id, sheets_selected,start_date=None):
         self.client = client
         self.config_start_date = start_date
         self.spreadsheet_id = spreadsheet_id
+        self.sheets_selected = sheets_selected
 
     def get_path(self, sheet_title_encoded=""):
         """
@@ -311,11 +312,19 @@ class SpreadSheetMetadata(GoogleSheets):
         spreadsheet_md_results = self.client.get(path=path, params=querystring, api=api, endpoint=self.stream_name)
 
         sheets = spreadsheet_md_results.get('sheets')
+        # selecting sheets only when provided by user
+        order_selected_sheets = []
+        if self.sheets_selected:
+            for sheet in sheets:
+                if sheet.get('properties', {}).get('title') in [sheet_name.strip() for sheet_name in self.sheets_selected.split(",") ]:
+                    order_selected_sheets.append(sheet)
+            sheets = order_selected_sheets
+
         if sheets:
             # Loop thru each worksheet in spreadsheet
             for sheet in sheets:
                 # GET sheet_json_schema for each worksheet (from function above)
-                sheet_json_schema, columns = schema.get_sheet_metadata(sheet, self.spreadsheet_id, self.client)
+                sheet_json_schema, columns = schema.get_sheet_metadata(sheet, self.spreadsheet_id, self.client,self.sheets_selected)
 
                 # SKIP empty sheets (where sheet_json_schema and columns are None)
                 if sheet_json_schema and columns:
@@ -465,7 +474,7 @@ class SheetsLoadData(GoogleSheets):
                 sheet_id = sheet.get('properties', {}).get('sheetId')
 
                 # GET sheet_metadata and columns
-                sheet_schema, columns = schema.get_sheet_metadata(sheet, self.spreadsheet_id, self.client)
+                sheet_schema, columns = schema.get_sheet_metadata(sheet, self.spreadsheet_id, self.client, self.sheets_selected)
                 # LOGGER.info('sheet_schema: {}'.format(sheet_schema))
 
                 # SKIP empty sheets (where sheet_schema and columns are None)
