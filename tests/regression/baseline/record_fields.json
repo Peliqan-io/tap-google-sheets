@@ -1,0 +1,48 @@
+{
+  "empdetails": [
+    "Designation",
+    "Home",
+    "ID",
+    "Name",
+    "__sdc_row",
+    "__sdc_sheet_id",
+    "__sdc_spreadsheet_id"
+  ],
+  "salary": [
+    "Annual Salary (USD)",
+    "Benefits Package",
+    "Bonus (USD)",
+    "Department",
+    "ID",
+    "Next Review Date",
+    "Performance Rating (2024)",
+    "Position",
+    "Start Date",
+    "Stock Options Granted",
+    "__sdc_row",
+    "__sdc_sheet_id",
+    "__sdc_spreadsheet_id"
+  ],
+  "sheet_metadata": [
+    "columns",
+    "gridProperties",
+    "index",
+    "sheetId",
+    "sheetType",
+    "sheetUrl",
+    "spreadsheetId",
+    "title"
+  ],
+  "sheets_loaded": [
+    "lastRowNumber",
+    "loadDate",
+    "sheetId",
+    "spreadsheetId",
+    "title"
+  ],
+  "spreadsheet_metadata": [
+    "properties",
+    "spreadsheetId",
+    "spreadsheetUrl"
+  ]
+}

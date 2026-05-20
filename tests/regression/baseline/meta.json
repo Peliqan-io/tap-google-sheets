@@ -1,0 +1,10 @@
+{
+  "python_version": "3.9.25",
+  "streams": [
+    "spreadsheet_metadata",
+    "salary",
+    "empdetails",
+    "sheet_metadata",
+    "sheets_loaded"
+  ]
+}
