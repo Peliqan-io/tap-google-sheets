@@ -9,8 +9,8 @@ setup(name='tap-google-sheets',
       classifiers=['Programming Language :: Python :: 3 :: Only'],
       py_modules=['tap_google_sheets'],
       install_requires=[
-          'backoff==1.8.0',
-          'requests==2.22.0',
+          'backoff>=2.2.1',
+          'requests>=2.28.0',
           'singer-python @ git+https://github.com/peliqan-io/singer-python@master'
       ],
       extras_require={

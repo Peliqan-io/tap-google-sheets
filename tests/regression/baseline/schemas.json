@@ -1,0 +1,420 @@
+{
+  "empdetails": {
+    "additionalProperties": false,
+    "properties": {
+      "Designation": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Home": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "ID": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "__sdc_row": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "__sdc_sheet_id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "__sdc_spreadsheet_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  },
+  "salary": {
+    "additionalProperties": false,
+    "properties": {
+      "Annual Salary (USD)": {
+        "anyOf": [
+          {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "Benefits Package": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Bonus (USD)": {
+        "anyOf": [
+          {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "Department": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "ID": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Next Review Date": {
+        "anyOf": [
+          {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "Performance Rating (2024)": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Position": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "Start Date": {
+        "anyOf": [
+          {
+            "format": "date",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "Stock Options Granted": {
+        "anyOf": [
+          {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ]
+      },
+      "__sdc_row": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "__sdc_sheet_id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "__sdc_spreadsheet_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  },
+  "sheet_metadata": {
+    "additionalProperties": false,
+    "properties": {
+      "columns": {
+        "anyOf": [
+          {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "columnIndex": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "columnLetter": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "columnName": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "columnSkipped": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "columnType": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "format": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": "array"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "gridProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "columnCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "frozenColumnCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "frozenRowCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "rowCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "index": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "sheetId": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "sheetType": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "sheetUrl": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "spreadsheetId": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "title": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  },
+  "sheets_loaded": {
+    "additionalProperties": false,
+    "properties": {
+      "lastRowNumber": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "loadDate": {
+        "format": "date-time",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "sheetId": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "spreadsheetId": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "title": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  },
+  "spreadsheet_metadata": {
+    "additionalProperties": false,
+    "properties": {
+      "properties": {
+        "additionalProperties": false,
+        "properties": {
+          "autoRecalc": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "locale": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timeZone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "spreadsheetId": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "spreadsheetUrl": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  }
+}

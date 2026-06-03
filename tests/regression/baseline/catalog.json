@@ -1,0 +1,886 @@
+{
+  "streams": [
+    {
+      "key_properties": [
+        "spreadsheetId"
+      ],
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "spreadsheetId"
+            ]
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "spreadsheetId"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "properties"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "spreadsheetUrl"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "properties": {
+            "additionalProperties": false,
+            "properties": {
+              "autoRecalc": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "locale": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "timeZone": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "title": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "spreadsheetId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "spreadsheetUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "spreadsheet_metadata",
+      "tap_stream_id": "spreadsheet_metadata"
+    },
+    {
+      "key_properties": [
+        "__sdc_row"
+      ],
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "__sdc_row"
+            ]
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_spreadsheet_id"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_sheet_id"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_row"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Department"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Position"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Annual Salary (USD)"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Bonus (USD)"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Stock Options Granted"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Benefits Package"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Start Date"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Performance Rating (2024)"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Next Review Date"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "Annual Salary (USD)": {
+            "anyOf": [
+              {
+                "format": "singer.decimal",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ]
+          },
+          "Benefits Package": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Bonus (USD)": {
+            "anyOf": [
+              {
+                "format": "singer.decimal",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ]
+          },
+          "Department": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ID": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Next Review Date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ]
+          },
+          "Performance Rating (2024)": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Position": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Start Date": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ]
+          },
+          "Stock Options Granted": {
+            "anyOf": [
+              {
+                "format": "singer.decimal",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ]
+          },
+          "__sdc_row": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "__sdc_sheet_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "__sdc_spreadsheet_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "salary",
+      "tap_stream_id": "salary"
+    },
+    {
+      "key_properties": [
+        "__sdc_row"
+      ],
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "__sdc_row"
+            ]
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_spreadsheet_id"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_sheet_id"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "__sdc_row"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Name"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Designation"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "Home"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "Designation": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Home": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ID": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "__sdc_row": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "__sdc_sheet_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "__sdc_spreadsheet_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "empdetails",
+      "tap_stream_id": "empdetails"
+    },
+    {
+      "key_properties": [
+        "sheetId"
+      ],
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "sheetId"
+            ]
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "spreadsheetId"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sheetId"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "index"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sheetType"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sheetUrl"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gridProperties"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "columns"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "columnIndex": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "columnLetter": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "columnName": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "columnSkipped": {
+                      "type": [
+                        "null",
+                        "boolean"
+                      ]
+                    },
+                    "columnType": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "format": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "type": {
+                      "anyOf": [
+                        {
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "type": [
+                    "null",
+                    "object"
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "gridProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "columnCount": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "frozenColumnCount": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "frozenRowCount": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "rowCount": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "index": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "sheetId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "sheetType": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sheetUrl": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "spreadsheetId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "sheet_metadata",
+      "tap_stream_id": "sheet_metadata"
+    },
+    {
+      "key_properties": [
+        "spreadsheetId",
+        "sheetId",
+        "loadDate"
+      ],
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "forced-replication-method": "FULL_TABLE",
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "spreadsheetId",
+              "sheetId",
+              "loadDate"
+            ]
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "spreadsheetId"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sheetId"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "loadDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastRowNumber"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "lastRowNumber": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "loadDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sheetId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "spreadsheetId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "sheets_loaded",
+      "tap_stream_id": "sheets_loaded"
+    }
+  ]
+}
